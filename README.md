@@ -14,7 +14,7 @@ To implement a program to encrypt plaintext and decrypt ciphertext using the DES
 
 <br>
 
-## DESIGN STEPS:
+## ALGORITHM:
 
 <br>
 
