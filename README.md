@@ -1,28 +1,51 @@
-# Ex-7 Implement DES Encryption and Decryption
+# Ex-7 IMPLEMENT DES ENCRYPTION AND DECRYPTION
+
+<br>
+
 ## AIM:
+
+<br>
 
 To implement a program to encrypt plaintext and decrypt ciphertext using the DES (Data Encryption Standard) encryption technique.
 
+<br>
+
 ## DESIGN STEPS:
+
+<br>
 
 Step 1: Design the DES algorithm.
 
+<br>
+
 Step 2: Implement the algorithm using C++.
+
+<br>
 
 Step 3: Test the algorithm with different key values and input text.
 
+<br>
+
 ## ALGORITHM DESCRIPTION:
 
+<br>
+
 The DES algorithm operates on 64-bit blocks of data, using a 56-bit key. DES involves an initial permutation, followed by 16 rounds of complex operations, and ends with a final permutation. Below are the key steps involved:
+
+<br>
 
 1. Key Generation:
 
   DES uses a 64-bit key, where every 8th bit is used for parity, resulting in a 56-bit effective key.
   The key is divided into two halves, and then 16 round keys are generated for the encryption process.
 
+<br>
+
 2. Initial Permutation (IP):
 
 The 64-bit plaintext block is permuted based on a fixed table, reordering the bits.
+
+<br>
 
 3. Round Operations:
 
@@ -33,14 +56,24 @@ The 64-bit plaintext block is permuted based on a fixed table, reordering the bi
     Pass the result through the S-Boxes to produce a 32-bit output.
     XOR the output with the left half, and swap the halves.
 
+<br>
+
 4. Final Permutation (IP-1):
 
   After 16 rounds, the left and right halves are recombined, and the final permutation is applied to produce the ciphertext.
+
+<br>
+
 5. Decryption:
 
   The decryption process follows the same steps as encryption but applies the round keys in reverse order.
 
+<br>
+
 ## PROGRAM:
+
+<br>
+
 ```
 #include <iostream>
 #include <cstring>
@@ -235,10 +268,19 @@ void aesDecrypt(uint8_t input[AES_BLOCK_SIZE], uint8_t key[AES_BLOCK_SIZE], uint
     memcpy(output, state, AES_BLOCK_SIZE);
 }
 ```
+
+<br>
+
 ## OUTPUT:
+
+<br>
 
 ![image](https://github.com/user-attachments/assets/8c99b351-33ab-45e3-9484-2ee4bd02c1bf)
 
+<br>
+
 ## RESULT:
+
+<br>
 
 The DES algorithm was successfully implemented and tested with different key values and inputs. The program correctly encrypts and decrypts the given input using the DES technique.
