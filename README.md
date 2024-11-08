@@ -30,50 +30,6 @@ Step 3: Test the algorithm with different key values and input text.
 
 <br>
 
-## ALGORITHM DESCRIPTION:
-
-<br>
-
-The DES algorithm operates on 64-bit blocks of data, using a 56-bit key. DES involves an initial permutation, followed by 16 rounds of complex operations, and ends with a final permutation. Below are the key steps involved:
-
-<br>
-
-1. Key Generation:
-
-  DES uses a 64-bit key, where every 8th bit is used for parity, resulting in a 56-bit effective key.
-  The key is divided into two halves, and then 16 round keys are generated for the encryption process.
-
-<br>
-
-2. Initial Permutation (IP):
-
-The 64-bit plaintext block is permuted based on a fixed table, reordering the bits.
-
-<br>
-
-3. Round Operations:
-
-  The data block is split into two halves (left and right).
-  For each round (16 rounds total):
-    Expand the right half to 48 bits.
-    XOR the expanded right half with the round key.
-    Pass the result through the S-Boxes to produce a 32-bit output.
-    XOR the output with the left half, and swap the halves.
-
-<br>
-
-4. Final Permutation (IP-1):
-
-  After 16 rounds, the left and right halves are recombined, and the final permutation is applied to produce the ciphertext.
-
-<br>
-
-5. Decryption:
-
-  The decryption process follows the same steps as encryption but applies the round keys in reverse order.
-
-<br>
-
 ## PROGRAM:
 
 <br>
